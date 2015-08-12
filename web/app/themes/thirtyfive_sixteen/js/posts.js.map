@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./coffee/posts.coffee"],"names":[],"mappings":";;;;AAAA,qBAAQ,CAAR","file":"posts.js","sourcesContent":["require './app/metrics'\n\n\n/** WEBPACK FOOTER **\n ** ./coffee/posts.coffee\n **/"],"sourceRoot":""}

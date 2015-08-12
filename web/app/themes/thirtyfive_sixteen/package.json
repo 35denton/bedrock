@@ -1,0 +1,23 @@
+{
+  "name": "thirtyfive_sixteen",
+  "version": "0.0.1",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp build-dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.9.3",
+    "fingerprintjs2": "^0.5.1",
+    "gulp-less": "^3.0.3",
+    "gulp-less-sourcemap": "^1.4.2",
+    "jquery": "^2.1.4",
+    "waypoints": "^3.1.1",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1"
+  }
+}

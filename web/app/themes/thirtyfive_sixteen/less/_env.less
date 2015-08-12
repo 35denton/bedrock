@@ -1,0 +1,18 @@
+// _env.less
+@import "./bootstrap/variables.less";
+@import "./bootstrap/mixins.less";
+
+.container() {
+  .container-fixed();
+
+  // http://stackoverflow.com/a/20532235
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}

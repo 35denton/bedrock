@@ -1,0 +1,72 @@
+// 35denton.less
+@import "_env.less";
+
+
+#masthead, #content, #colophon {
+	.container();
+}
+
+#masthead {
+	.site-branding, .site-navigation {
+		.make-row();
+	}
+}
+
+#content {
+	.content-area, .widget-area {
+		.make-row();
+	}
+
+	.site-main {
+		.make-xs-column(11);
+		.make-sm-column(9);
+		.make-md-column(8);
+		// .make-lg-column();
+	}
+
+	aside {
+		.make-xs-column(11);
+		.make-sm-column(3);
+		.make-md-column(3);
+		.make-md-column-offset(1);
+	}
+
+}
+
+#masthead {
+	.site-branding, .main-navigation {
+		.make-row();
+	}
+	.site-title, .site-description {
+		.make-xs-column(12);
+	}
+
+	.menu {
+		.make-xs-column(12);
+		.make-sm-column(10);
+		.make-md-column(9);
+		.make-lg-column(8);
+	}
+}
+
+#colophon {
+	.site-info {
+		.make-row();
+	}
+}
+
+.main-navigation {
+	@padding: 1ex;
+	li {
+		padding-left: @padding;
+		padding-right: @padding;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
