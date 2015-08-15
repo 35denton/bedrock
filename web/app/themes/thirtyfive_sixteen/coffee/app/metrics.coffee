@@ -1,12 +1,13 @@
 $ = require 'jquery'
 Fingerprint2 = require 'fingerprintjs2'
-waypoints = require("script!../../node_modules/waypoints/lib/noframework.waypoints.js")
 
-console.log waypoints
+amplitude = require './metrics/amplitude'
+googleAnalytics = require './metrics/ga'
 
 init = ->
-  new Fingerprint2().get (result)->
-    amplitude.setUserId result
+  new Fingerprint2().get (fingerprint)->
+    ga 'set', 'userId', fingerprint
+    amplitude.user fingerprint
 
   $('a').on 'click', handleClick
 
@@ -17,8 +18,11 @@ handleClick = (event)->
 
   payload =
     text: $self.text()
-    url: $self.attr('src')
+    url: $self.attr 'href'
 
-  amplitude.logEvent identifier, payload
+  amplitude.track identifier, payload
+  ga('send', 'event', 'click', 'link', payload.url)
+
+  event.preventDefault()
 
 init()
